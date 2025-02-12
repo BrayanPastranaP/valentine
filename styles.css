@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Estilos generales */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #ffffff;
+  font-family: "Poppins", serif;
+  font-style: normal;
+  overflow-x: hidden;
+
+  background-image: url(img/background.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.container {
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+}
+
+#gifContainer img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin: 20px 0;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #fff;
+  font-weight: 700;
+  background-color: #fcb1b1;
+  display: inline-block;
+  padding: 15px 35px;
+  border-radius: 20px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row; /* Por defecto, los botones están en horizontal */
+  justify-content: center; /* Centra los botones horizontalmente */
+  gap: 20px; /* Espacio entre los botones */
+  width: 100%;
+  margin-top: 30px;
+}
+
+button {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 30px;
+  font-size: 2.2rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+  width: 15%; /* Ancho automático para que se ajuste al contenido */
+  box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+}
+
+#siBtn {
+  background-color: #009705;
+  color: white;
+}
+
+#noBtn {
+  background-color: #ff5733;
+  color: white;
+  max-height: 300px;
+}
+
+#siBtn:hover,
+#noBtn:hover {
+  background-color: #053a03;
+}
+
+#noBtn:hover {
+  background-color: #641e0d;
+}
+
+#messageContainer {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+/* Collage */
+.collage_container {
+  display: none;
+  margin: auto;
+  width: 90%;
+  margin-top: 0;
+}
+.collage_container .img_container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.collage_container .collage_img {
+  width: calc(30% - 10px);
+  border-radius: 20px;
+  margin-bottom: 20px;
+  object-fit: cover;
+  border: 5px solid #fff;
+
+}
+
+.collage_container h2 {
+    font-size: 1.5rem;
+  color: #fff;
+  font-weight: 700;
+  margin:0;
+  padding:0;
+  margin-bottom: 20px;
+}
+
+/* Estilos para móviles (pantallas menores a 600px) */
+@media (max-width: 600px) {
+  h1 {
+    margin: 0;
+  }
+
+  .buttons {
+    flex-direction: column; /* Cambia a vertical en móviles */
+    align-items: center; /* Centra los botones verticalmente */
+    gap: 10px; /* Espacio entre los botones */
+  }
+
+  button {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 10px 20px;
+    width: 90%; /* Ocupa el 90% del ancho en móviles */
+  }
+
+  #gifContainer img {
+    width: 90%;
+    margin: 0;
+  }
+
+  .collage_container .img_container {
+    gap: 0;
+  }
+  .collage_container .collage_img {
+    width: 100%;
+  }
+}
